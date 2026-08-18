@@ -1,0 +1,16 @@
+[Unit]
+Description=Self-hosted Mail MCP (IMAP/SMTP generic, REST + MCP + webhooks)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/mail-mcp
+EnvironmentFile=/root/mail-mcp/.env
+ExecStart=/usr/bin/node /root/mail-mcp/index.js
+Restart=always
+RestartSec=5
+StandardOutput=append:/root/mail-mcp/service.log
+StandardError=append:/root/mail-mcp/service.log
+
+[Install]
+WantedBy=multi-user.target

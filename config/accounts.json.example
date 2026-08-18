@@ -1,0 +1,8 @@
+[
+  {
+    "id": "example",
+    "user": "user@example.com",
+    "imap": { "host": "imap.example.com", "port": 993, "secure": true },
+    "smtp": { "host": "smtp.example.com", "port": 465, "secure": true }
+  }
+]
