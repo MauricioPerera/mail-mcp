@@ -6,3 +6,4 @@ config/webhooks.sqlite
 config/webhooks.sqlite-*
 config/service.json
 *.log
+coverage/

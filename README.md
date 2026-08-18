@@ -1,6 +1,7 @@
 # mail-mcp
 
 [![CI](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MauricioPerera/mail-mcp/master/badges/coverage.json)](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](package.json)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -65,3 +66,16 @@ via `EnvironmentFile`.
 ## Auth
 
 Every REST and MCP request requires `Authorization: Bearer <MAIL_MCP_API_TOKEN>`.
+
+## Tests
+
+```bash
+npm test              # run once
+npm run test:coverage # run with coverage report
+```
+
+Coverage covers the pure/logic modules (`lib/schemas.js`, `lib/accounts.js`,
+`lib/webhooks-store.js`). `lib/mailclient.js` and `lib/idle-watcher.js` talk to
+real IMAP/SMTP servers and are exercised through manual end-to-end testing
+instead of unit tests — they're excluded from the coverage badge so it isn't
+misleading.

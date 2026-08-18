@@ -4,7 +4,9 @@
   "description": "Self-hosted generic IMAP/SMTP mail service exposing a REST API, a message.received webhook watcher (IMAP IDLE), and an MCP server — works with any mailbox given IMAP/SMTP credentials.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "license": "MIT",
   "engines": {
@@ -18,5 +20,9 @@
     "mailparser": "^3.9.15",
     "nodemailer": "^9.0.5",
     "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.10",
+    "vitest": "^4.1.10"
   }
 }
