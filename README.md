@@ -1,6 +1,7 @@
 # mail-mcp
 
 [![CI](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml)
+[![Node.js Version](https://img.shields.io/github/package-json/engines/MauricioPerera/mail-mcp?filename=package.json&label=node)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Self-hosted, provider-agnostic mail service. Point it at any mailbox's IMAP/SMTP

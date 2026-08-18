@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node index.js"
   },
-  "license": "ISC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "better-sqlite3": "^13.0.3",
