@@ -1,5 +1,7 @@
 # mail-mcp
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Self-hosted, provider-agnostic mail service. Point it at any mailbox's IMAP/SMTP
 credentials and it exposes:
 
