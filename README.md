@@ -1,8 +1,10 @@
 # mail-mcp
 
 [![CI](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](package.json)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/MauricioPerera/mail-mcp/pulls)
 
 Self-hosted, provider-agnostic mail service. Point it at any mailbox's IMAP/SMTP
 credentials and it exposes:
