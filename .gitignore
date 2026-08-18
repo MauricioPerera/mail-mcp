@@ -2,5 +2,7 @@ node_modules/
 .env
 config/accounts.json
 config/webhooks.json
+config/webhooks.sqlite
+config/webhooks.sqlite-*
 config/service.json
 *.log

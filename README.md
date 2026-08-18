@@ -6,11 +6,19 @@ credentials and it exposes:
 - **REST API** mirroring the common mailbox operations: list folders, list/get/search
   messages, send, flag, move, delete, quota (best-effort).
 - **Webhooks** (`message.received`) via a persistent IMAP IDLE watcher — fires an
-  HTTP POST (with a per-webhook bearer secret) whenever new mail arrives.
+  HTTP POST (with a per-webhook bearer secret) whenever new mail arrives, retried
+  with exponential backoff (up to 6 attempts) if the receiving endpoint fails.
 - **MCP server** (Streamable HTTP, `POST /mcp`) exposing the same operations as tools,
   so any MCP-compatible agent can use it directly.
 
 Multi-mailbox from the start: add as many accounts as you want to `config/accounts.json`.
+
+Request bodies on the REST API are validated with Zod (`lib/schemas.js`) — invalid
+payloads get a `422 ERR_VALIDATION_FAILED` with field-level errors instead of reaching
+the mail layer. Webhook subscriptions persist in SQLite (`config/webhooks.sqlite`,
+via `better-sqlite3`) instead of a flat JSON file. Messages larger than
+`MAIL_MCP_MAX_MESSAGE_SIZE` (default 25MB) are returned with `bodyTruncated: true`
+and no parsed body/attachments, to avoid loading huge messages into memory.
 
 ## Setup
 
