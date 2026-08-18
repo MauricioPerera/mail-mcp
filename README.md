@@ -1,5 +1,6 @@
 # mail-mcp
 
+[![CI](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/MauricioPerera/mail-mcp/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Self-hosted, provider-agnostic mail service. Point it at any mailbox's IMAP/SMTP
